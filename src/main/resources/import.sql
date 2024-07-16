@@ -1,1 +1,0 @@
-insert into Person values(1, '전어'); 
