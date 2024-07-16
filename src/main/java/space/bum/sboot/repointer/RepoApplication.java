@@ -17,11 +17,11 @@ public class RepoApplication {
   }
 
   @Bean
-  CommandLineRunner runner(MyRepository myRepository) {
+  CommandLineRunner runner(UserRepository userRepository) {
     return args -> {
       MyUser user = new MyUser(100L, "홍기");
       
-      MyUser honGee= myRepository.save(user);
+      MyUser honGee= userRepository.save(user);
       log.info("저장된 사용자: {}", honGee.toString());
     };
   }
